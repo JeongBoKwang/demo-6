@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* 폰트 적용 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html {
+	font-familly: "Noto Sans KR", sans-serif;
+}
+/* 노말라이즈 */
+html, body, ul, li, h1, h2, h3 {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+/* 라이브러리 */
+h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+.con{
+	width:1000px;
+	margin: 0 auto;	
+}
+.table-box > table {
+	width:100%;
+	border-collapse:collapse;
+}
+.table-box > table th, .table-box > table td {
+	border:1px solid black;
+	padding:20px;
+}
+.table-box{
+	margin-botton: 20px;
+}
+/* 커스텀 */
+.con {
+	width: 1000px;
+} 
+/* 메뉴박스 시작 */
+.menu-box {
+	padding: 20px;
+}
+.form.form-type-1 input[type="text"], .form.form-type-1 textarea{
+	display: block;
+	width: 100%;
+}
+.form.form-type-1 textarea {
+	height: 450px;
+	resize: none;
+}
+/* 메뉴박스 끝 */

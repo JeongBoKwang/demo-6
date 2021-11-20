@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.spring.demo.dao.ArticleDao">
+	<!-- List<Article> getArticles() -->
+	<!-- 조회  -->
+	<select id="getArticles" parameterType="map"
+		resultType="Article">
+		SELECT id, regDate, title, body
+		FROM article
+		ORDER BY id DESC
+	</select>
+	
+	<!-- 쓰기 -->
+	<insert id="write" parameterType="map" useGeneratedKeys="true"
+		keyProperty="id">
+		INSERT INTO article
+		SET regDate = NOW(),
+		title = #{title},
+		body = #{body}
+	</insert>
+	
+	<!-- 상세 -->
+	<select id="getArticle" parameterType="map"
+		resultType="Article">
+		SELECT *
+		FROM article
+		WHERE id = #{id}
+	</select>
+	
+	<!-- 수정 -->
+	<update id = "modify">
+		UPDATE article
+		SET title = #{title},
+		body = #{body}
+		WHERE id = #{id}
+	</update>
+	
+	<!-- 삭제 -->
+	<delete id = "remove">
+		DELETE FROM article
+		WHERE id = ${id}
+	</delete>
+</mapper>
