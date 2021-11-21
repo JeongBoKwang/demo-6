@@ -8,9 +8,15 @@
 		alert(jsAlertMsg);
 	}
 
+	var jsHistoryBack = '${jsHistoryBack}' == 'true';
+	if(jsHistoryBack) {
+		history.back();
+		}
+
 	var jsLocationReplaceUrl = '${jsLocationReplaceUrl}';
 
 	if(jsLocationReplaceUrl) {
 		location.replace(jsLocationReplaceUrl);
 		}
+
 </script>
