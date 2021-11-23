@@ -28,8 +28,10 @@
 						<td>${article.regDate}</td>
 						<td><a href="./detail?id=${article.id}">${article.title}</a></td>
 						<td>
+							<c:if test="${isLogined}">
 							<a href="./modify?id=${article.id}">수정하기</a>
 							<a href="./doDelete?id=${article.id}" onclick="if(confirm('삭제하시겠습니다?') == false )return false;">삭제</a>
+							</c:if>
 						</td>
 					</tr>
 				</c:forEach>

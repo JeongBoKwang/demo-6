@@ -45,10 +45,15 @@ h1 {
 	width: 100%;
 }
 .form.form-type-1 textarea {
-	height: 450px;
+	height: 400px;
 	resize: none;
+	width: 100%
 }
 /* 메뉴박스 끝 */
-.menu-box > a:last-child {
+/* .menu-box > a:last-child {
 	float: right;
+	padding: 0 10px 0 0;
 }
+.menu-box > a:nth-child(3) {
+	float: right;
+} */

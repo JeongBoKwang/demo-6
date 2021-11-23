@@ -8,6 +8,11 @@
 		WHERE loginId = #{loginId}
 	</select>
 	
+	<select id="getMemberById" resultType="Member">
+		SELECT *
+		FROM `member`
+		WHERE id = #{id}
+	</select>
 	
 	<!-- 가입 -->
 	<insert id="join" parameterType="map" useGeneratedKeys="true"
